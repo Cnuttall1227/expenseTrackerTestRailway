@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DisplayExpenses from "./components/Expenses/DisplayExpenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { getExpenses, addExpense } from "./services/expenseService";
