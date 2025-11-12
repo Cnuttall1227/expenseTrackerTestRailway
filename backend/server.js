@@ -29,6 +29,13 @@ app.use('/api/categories', categoryRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT; 
+
+if (!PORT) {
+    console.error("Error: PORT environment variable is not set!");
+    // Exit the process, letting Railway know the service failed
+    process.exit(1); 
+}
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
