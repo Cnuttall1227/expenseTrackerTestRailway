@@ -10,7 +10,15 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 const app = express();
 
-app.use(cors());
+// CORS configuration
+app.use(cors({
+  origin: [
+    'https://frontend-production-df54.up.railway.app',
+    'http://localhost:3000'
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 connectDB();
@@ -29,13 +37,9 @@ app.use('/api/categories', categoryRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT; 
+const PORT = process.env.PORT || 5000; 
 
-if (!PORT) {
-    console.error("Error: PORT environment variable is not set!");
-    // Exit the process, letting Railway know the service failed
-    process.exit(1); 
-}
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
+});
 
