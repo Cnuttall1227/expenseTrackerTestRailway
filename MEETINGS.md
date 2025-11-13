@@ -6,4 +6,5 @@
  10/29/25 8:00-8:30 (All members) - Discussed progress so far (backend set up and hooked up to database) work on the models currently in progress. Added admin permissions to all members. Work on connecting backend to frontend for next meeting.
 
  11/05/25 8:00-8:15 (All members) - Discussed progress since previous meeting (api and connecting frontend to backend). Discussed how MongoDB is set up on Atlas, its connection string, and moving from private account to public. Considered authentication implementation. Planned to connect functionality and prepare hosting enviornment by next meeting.
+ 
 11/12/25 8:00-8:15 (All members) - Discussed progress since previous meeting, went over connected frontend to backend with confirmation, confirmed registration and authentication implementation worked, implemented pending pull request. Went over Railway deployment for hosting being live. Talked about submitting Milestone 2 and submitting screenshots.
